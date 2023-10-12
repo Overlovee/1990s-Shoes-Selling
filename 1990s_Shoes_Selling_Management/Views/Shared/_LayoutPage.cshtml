@@ -38,19 +38,44 @@
     </script>
     <script>
         var searchInput = document.getElementById("search-input");
+        var clearSearchInput = document.getElementById("clear-search-input");
+        var searchInputBox = document.querySelector(".search-input-box");
         var searchFrame = document.querySelector(".search-frame");
         var searchBox = document.querySelector(".search-box");
-        searchBox.style.borderRadius = "10px 10px 0 0";
+        var cancelSearchBox = document.querySelector(".cancel-search-box");
         // Lắng nghe sự kiện input trên input
         searchInput.addEventListener("input", function () {
             if (searchInput.value.trim() !== "") {
                 searchFrame.style.display = "block";
-                
-                searchBox.style.backgroundColor = "#efefef";
-            } else {
-                searchFrame.style.display = "none";
-                searchBox.style.backgroundColor = "transparent";
+                searchInput.style.width = "calc(100% - 2rem - 2rem - 2rem)";
+                cancelSearchBox.style.display = "inline-block";
+                clearSearchInput.style.display = "inline-block";
+                searchBox.classList.add("search-box-open");
+                searchInputBox.classList.add("search-input-box-open");
+                blurScreen.style.visibility = 'visible';
+                clearSearchInput.addEventListener("click", function () {
+                    searchInput.value = "";
+                })
+
+                cancelSearchBox.addEventListener("click", function () {
+                    searchInput.value = "";
+                    searchFrame.style.display = "none";
+                    searchInput.style.width = "calc(100% - 2rem - 2rem)";
+                    clearSearchInput.style.display = "none";
+                    cancelSearchBox.style.display = "none";
+                    blurScreen.style.visibility = 'hidden';
+
+                    searchBox.classList.remove("search-box-open");
+                    searchInputBox.classList.remove("search-input-box-open");
+
+                })
             }
+            //else {
+            //    searchFrame.style.display = "none";
+            //    cancelSearchBox.style.display = "none";
+
+            //    searchBox.classList.remove("search-box-open");
+            //}
         });
     </script>
 </body>

@@ -118,12 +118,12 @@ header {
     padding: 0 48px;
 }
 
-#logo {
+.logo {
     width: fit-content;
     float: left;
 }
 
-#logo svg {
+.logo svg {
     transform: scale(1.25);
 }
 
@@ -165,11 +165,34 @@ nav {
 
 .search-box {
     width: 17%;
-    height:fit-content;
-    border-radius: 10px 10px 0 0;
+    height: fit-content;
+}
+
+.search-box-open {
+    position: absolute;
+    width: 100%;
+    top: -5rem;
+    left: 0;
+    background-color: white;
+    padding: 0 48px;
+    padding-top: 10px;
+    text-align: center;
+}
+.cancel-search-box {
+    display: none;
+    float: right;
+    height: 40px;
+    line-height: 1;
+}
+.cancel-search-box-btn {
+    font-weight: 600;
+    color: hsla(0, 0%, 7%, .36);
+    height: 40px;
+    text-align: center;
+    line-height: 1;
 }
 .search-input-box {
-    width:100%;
+    width: 100%;
     background-color: rgb(243, 243, 243);
     height: 40px;
     line-height: 40px;
@@ -178,16 +201,32 @@ nav {
     position: relative;
 }
 
+.search-input-box-open {
+    width: 50%;
+    display: inline-block;
+    background-color: #eaeaea;
+}
 
+.search-input-box button {
+    display: inline-block;
+    width: 2rem;
+    float: left;
+}
 .search-input-box i {
     font-size: 1.8rem;
 }
 
 .search-input-box input {
-    width:100%;
+    width: calc(100% - 2rem - 2rem);
     font-size: 1.6rem;
     font-weight: lighter;
     margin-left: 5px;
+    float: left
+}
+#clear-search-input {
+    display: none;
+    width: 2rem;
+    float: left;
 }
 
 .search-input-box input::placeholder {
@@ -198,12 +237,6 @@ nav {
 .search-input-box:hover {
     background-color: #eaeaea;
 }
-/*.search-input-box input:focus + .search-frame {
-    display: block;
-}
-.search-input-box input:focus + .search-box {
-    background-color: #eaeaea;
-}*/
 
 .search-frame {
     position: absolute;
@@ -213,9 +246,10 @@ nav {
     left: 0;
     width: 100%;
     min-height: 30rem;
-    background-color: #efefef;
+    background-color: white;
+    padding: 0 48px;
     cursor: default;
-    border-radius: 0 0 10px 10px;
+    text-align: left;
 }
 
 /* sub-nav on the top */
@@ -563,13 +597,13 @@ footer a:hover {
         height: 5rem;
     }
 
-    #logo {
+    .logo {
         height: 5rem !important;
         display: flex;
         align-items: center;
     }
 
-    #logo svg {
+    .logo svg {
         height: 5rem !important;
         width: 5rem;
         align-items: center;
@@ -586,20 +620,18 @@ footer a:hover {
         width: calc(100% - 22rem);
         display: inline-block;
     }
-    .search-input-box {
-        position: relative;
+    .search-input-box-open {
+        width: 70%;
+    }
+    .search-box-open {
+        width: 100%;
         top: 0;
         left: 0;
-        height: 5rem;
-        line-height: 5rem;
-        border-radius: 0;
-        padding-left: 0;
-        padding: 0 2rem;
-        margin-left: 0;
-        float: left;
-        box-sizing: border-box;
-        background-color: rgb(243, 243, 243);
-        border-radius: 60px;
+        padding: 0 24px;
+        padding-top: 10px;
+    }
+    .search-frame {
+        padding: 0 24px;
     }
 
     .navbar-toggler {
@@ -693,12 +725,12 @@ footer a:hover {
         display: block;
     }
 
-    #logo {
+    .logo {
         height: 40px !important;
         display:flex;
         align-items: center;
     }
-    #logo svg{
+    .logo svg{
         height: 40px!important;
         width:40px;
         align-items:center;
@@ -716,22 +748,25 @@ footer a:hover {
         width: calc(100% - 22rem);
         display: inline-block;
     }
-    .search-input-box {
-        position: relative;
-        top: 0;
-        left: 0;
-        height: 4rem;
-        line-height: 4rem;
-        border-radius: 0;
-        padding-left: 0;
-        padding: 0 2rem;
-        margin-left: 0;
-        float: left;
-        box-sizing: border-box;
-        background-color: rgb(243, 243, 243);
-        border-radius: 60px;
+    .search-box {
+        width: calc(100% - 22rem);
+        display: inline-block;
     }
 
+    .search-input-box-open {
+        width: 70%;
+    }
+
+    .search-box-open {
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding: 0 24px;
+        padding-top: 10px;
+    }
+    .search-frame {
+        padding: 0 24px;
+    }
     .search-input-box button {
         float: left;
     }
