@@ -107,6 +107,7 @@
     <Content Include="Views\Shared\header.cshtml" />
     <Content Include="Views\Shared\footer.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\ShowHomePage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

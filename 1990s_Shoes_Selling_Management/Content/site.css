@@ -149,6 +149,7 @@ nav {
 }
 
 .container-fluid {
+    width: 100%;
     padding: 0;
 }
 
@@ -162,14 +163,21 @@ nav {
     text-align: center;
 }
 
-.search-input-box {
+.search-box {
     width: 17%;
+    height:fit-content;
+    border-radius: 10px 10px 0 0;
+}
+.search-input-box {
+    width:100%;
     background-color: rgb(243, 243, 243);
     height: 40px;
     line-height: 40px;
     border-radius: 60px;
-    padding-left:1rem;
+    padding-left: 1.6rem;
+    position: relative;
 }
+
 
 .search-input-box i {
     font-size: 1.8rem;
@@ -185,6 +193,29 @@ nav {
 .search-input-box input::placeholder {
     font-size: 1.6rem;
     color: rgb(215, 215, 215);
+}
+
+.search-input-box:hover {
+    background-color: #eaeaea;
+}
+/*.search-input-box input:focus + .search-frame {
+    display: block;
+}
+.search-input-box input:focus + .search-box {
+    background-color: #eaeaea;
+}*/
+
+.search-frame {
+    position: absolute;
+    display: none;
+    color: black;
+    z-index: 999;
+    left: 0;
+    width: 100%;
+    min-height: 30rem;
+    background-color: #efefef;
+    cursor: default;
+    border-radius: 0 0 10px 10px;
 }
 
 /* sub-nav on the top */
@@ -551,19 +582,20 @@ footer a:hover {
     .container-fluid {
         display: inline-block !important;
     }
-
+    .search-box {
+        width: calc(100% - 22rem);
+        display: inline-block;
+    }
     .search-input-box {
-        width: calc(100% - 20rem - 2rem);
         position: relative;
         top: 0;
         left: 0;
-        background-color: transparent;
         height: 5rem;
         line-height: 5rem;
         border-radius: 0;
         padding-left: 0;
         padding: 0 2rem;
-        margin-left: 2rem;
+        margin-left: 0;
         float: left;
         box-sizing: border-box;
         background-color: rgb(243, 243, 243);
@@ -680,18 +712,20 @@ footer a:hover {
         display: inline-block!important;
     }
 
+    .search-box {
+        width: calc(100% - 22rem);
+        display: inline-block;
+    }
     .search-input-box {
-        width: calc(100% - 20rem);
         position: relative;
         top: 0;
         left: 0;
-        background-color: transparent;
         height: 4rem;
         line-height: 4rem;
         border-radius: 0;
         padding-left: 0;
         padding: 0 2rem;
-        margin-left:2rem;
+        margin-left: 0;
         float: left;
         box-sizing: border-box;
         background-color: rgb(243, 243, 243);

@@ -13,5 +13,9 @@ namespace _1990s_Shoes_Selling_Management.Controllers
         {
             return View();
         }
+        public ActionResult ShowHomePage()
+        {
+            return View();
+        }
     }
 }

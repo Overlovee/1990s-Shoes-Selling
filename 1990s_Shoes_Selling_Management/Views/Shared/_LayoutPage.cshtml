@@ -36,5 +36,22 @@
             });
         }
     </script>
+    <script>
+        var searchInput = document.getElementById("search-input");
+        var searchFrame = document.querySelector(".search-frame");
+        var searchBox = document.querySelector(".search-box");
+        searchBox.style.borderRadius = "10px 10px 0 0";
+        // Lắng nghe sự kiện input trên input
+        searchInput.addEventListener("input", function () {
+            if (searchInput.value.trim() !== "") {
+                searchFrame.style.display = "block";
+                
+                searchBox.style.backgroundColor = "#efefef";
+            } else {
+                searchFrame.style.display = "none";
+                searchBox.style.backgroundColor = "transparent";
+            }
+        });
+    </script>
 </body>
 </html>
