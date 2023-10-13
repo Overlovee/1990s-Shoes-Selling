@@ -13,7 +13,7 @@
 <body>
     @RenderPage("header.cshtml")
 
-    <div class="content">
+    <div class="main-content">
         @RenderBody()
     </div>
 
@@ -47,7 +47,7 @@
         searchInput.addEventListener("input", function () {
             if (searchInput.value.trim() !== "") {
                 searchFrame.style.display = "block";
-                searchInput.style.width = "calc(100% - 2rem - 2rem - 2rem)";
+                searchInput.style.width = "calc(100% - 4rem - 4rem - 5px)";
                 cancelSearchBox.style.display = "inline-block";
                 clearSearchInput.style.display = "inline-block";
                 searchBox.classList.add("search-box-open");
@@ -60,7 +60,7 @@
                 blurScreen.addEventListener("click", function () {
                     searchInput.value = "";
                     searchFrame.style.display = "none";
-                    searchInput.style.width = "calc(100% - 2rem - 2rem)";
+                    searchInput.style.width = "calc(100% - 4rem - 5px)";
                     clearSearchInput.style.display = "none";
                     cancelSearchBox.style.display = "none";
                     blurScreen.style.visibility = 'hidden';
@@ -73,7 +73,7 @@
                 cancelSearchBox.addEventListener("click", function () {
                     searchInput.value = "";
                     searchFrame.style.display = "none";
-                    searchInput.style.width = "calc(100% - 2rem - 2rem)";
+                    searchInput.style.width = "calc(100% - 4rem - 5px)";
                     clearSearchInput.style.display = "none";
                     cancelSearchBox.style.display = "none";
                     blurScreen.style.visibility = 'hidden';
@@ -83,12 +83,6 @@
 
                 })
             }
-            //else {
-            //    searchFrame.style.display = "none";
-            //    cancelSearchBox.style.display = "none";
-
-            //    searchBox.classList.remove("search-box-open");
-            //}
         });
     </script>
 </body>
