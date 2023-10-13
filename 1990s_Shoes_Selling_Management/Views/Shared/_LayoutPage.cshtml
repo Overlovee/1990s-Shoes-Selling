@@ -57,6 +57,19 @@
                     searchInput.value = "";
                 })
 
+                blurScreen.addEventListener("click", function () {
+                    searchInput.value = "";
+                    searchFrame.style.display = "none";
+                    searchInput.style.width = "calc(100% - 2rem - 2rem)";
+                    clearSearchInput.style.display = "none";
+                    cancelSearchBox.style.display = "none";
+                    blurScreen.style.visibility = 'hidden';
+
+                    searchBox.classList.remove("search-box-open");
+                    searchInputBox.classList.remove("search-input-box-open");
+
+                })
+
                 cancelSearchBox.addEventListener("click", function () {
                     searchInput.value = "";
                     searchFrame.style.display = "none";
