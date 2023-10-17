@@ -358,92 +358,52 @@ figcaption h3 {
 }
 
 
-#main button {
+.main-content-btn {
     border-radius: 60px;
     line-height: 3.2rem;
     font-size: 1.7rem;
     padding: 5px 2rem;
-    background-color: white;
-    color: #757575;
+    background-color: #000000;
+    color: #fff;
 }
 
-#main button:hover {
-    background-color: rgb(219, 219, 219);
+.main-content-btn:hover {
+    background-color: hsla(0, 0%, 7%, .36);
 }
 
-#pegasus-btn {
-    background-color: white !important;
-    color: #757575 !important;
+.img-fluid{
+    width:100%;
 }
 
-#pegasus-btn:hover {
-    background-color: rgb(222, 222, 222) !important;
+.content-row-btn {
+    top: 50%;
+    margin-left: 3rem;
+}
+.title-content-box h2{
+    font-size: 3rem;
+}
+.card{
+    border: 0;
+}
+.card-body {
+    padding-left: 0;
+    padding-right: 0;
 }
 
-.content-grow {
-    margin-top: 8.4rem;
+.categories-shoes-btn {
+    line-height: 3.2rem;
+    font-size: 1.7rem;
+    padding: 5px 1rem;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    border-radius:0;
 }
 
-.items {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 12px;
-}
-
-.items {
-    position: relative;
-}
-
-.items img {
-    height: 100%;
-}
-
-.pegasus-types-btn {
-    display: block;
-    position: absolute;
-    z-index: 1;
-    top: 85%;
-    margin-left: 5rem;
-}
-
-.title {
-    font-size: 2.4rem;
-    padding: 1.8rem 0;
-}
-
-.menu-box {
-    padding: 0 24rem;
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 12px;
-    font-size: 1.6rem;
-    margin-top: 8rem;
-}
-
-.list-menu-item {
-    display: inline-block;
-    text-align: left;
-    line-height: 3.6rem;
-    padding: 0 1.2rem;
-}
-
-.list-menu-item h5 {
-    font-size: 1.6rem;
-    font-weight: lighter;
-}
-
-.list-menu-item ul {
-    margin-top: 1rem;
-    color: #757575;
-}
-
-.list-menu-item a:hover {
-    color: #111;
+.categories-shoes-btn:hover {
+    border-bottom: 1px solid #ff006e;
+    color: #ff006e;
 }
 /* /Midle */
-
-
 /* Footer */
 footer {
     margin-top: 8rem;
@@ -628,6 +588,7 @@ footer a:hover {
 
     .container-fluid {
         display: inline-block !important;
+        background-color: white;
     }
     .search-box {
         width: calc(100% - 22rem);
@@ -676,8 +637,9 @@ footer a:hover {
 
     /*Footer*/
     footer {
-        margin-top: 4rem;
         padding: 2rem 2rem 0 2rem;
+        clear: both;
+        bottom:0;
     }
     .footer-column {
         display: block;

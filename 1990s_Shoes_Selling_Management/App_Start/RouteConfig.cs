@@ -16,7 +16,7 @@ namespace _1990s_Shoes_Selling_Management
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Home", action = "ShowHomePage", id = UrlParameter.Optional }
             );
         }
     }
