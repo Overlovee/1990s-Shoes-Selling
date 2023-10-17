@@ -17,5 +17,9 @@ namespace _1990s_Shoes_Selling_Management.Controllers
         {
             return View();
         }
+        public ActionResult ShowShoesPage(string id = "Men")
+        {
+            return View();
+        }
     }
 }
