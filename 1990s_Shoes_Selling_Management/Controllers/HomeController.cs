@@ -21,5 +21,10 @@ namespace _1990s_Shoes_Selling_Management.Controllers
         {
             return View();
         }
+
+        public ActionResult ShowShoesDetail(string id = "Shoes-123")
+        {
+            return View();
+        }
     }
 }

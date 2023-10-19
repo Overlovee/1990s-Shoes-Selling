@@ -869,7 +869,148 @@ footer a:hover {
 
 
 
-/* PC: width >= 1024px */
-/*@media only screen and (min-width: 102.4em) {
 
-}*/
+/* single product
+*/
+.shoes-detail-box {
+    width: 100%;
+    padding: 0 8rem;
+    padding-top: 2rem;
+}
+
+.detail-img-box{
+    padding-left: 8rem;
+}
+.main-img-detail {
+    padding: 0 2rem;
+    padding-right: 6rem;
+}
+.main-img-detail img {
+    border-radius: 10px;
+    height:600px;
+}
+
+.sub-img-detail img {
+    border-radius: 10px;
+}
+
+.sub-content-img {
+    max-height: 600px;
+    overflow-y: scroll;
+}
+.sub-content-img .image-item {
+    height: 10rem;
+    width: 10rem;
+    margin: 0 auto;
+    margin-bottom: 10px; /* Khoảng cách giữa các ô vuông */
+}
+.sub-content-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details-title{
+    font-weight: bold;
+    font-size: 2rem;
+}
+.detail-price {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.shoes-size-box {
+    margin-top: 1rem;
+}
+.shoes-size-box input[type="button"] {
+    border: 1px solid #cacaca;
+    border-radius: 2px;
+    color: black;
+    font-size: 2rem;
+    line-height: 5.4rem;
+}
+.grid-layout-3col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    margin: 0 auto;
+}
+
+#add-bag-btn, #unfavorite-btn {
+    width: 100%;
+    height: 6.4rem;
+    font-size: 2rem !important;
+    line-height: 6.4rem;
+    margin-top: 1.6rem;
+    padding: 0;
+}
+
+#add-bag-btn {
+    background-color: #111 !important;
+    color: white !important;
+}
+
+#add-bag-btn:hover {
+    background-color: #4e4e4e !important;
+}
+
+#unfavorite-btn {
+    background-color: white !important;
+    color: #111 !important;
+    border: 1px solid #cacaca;
+}
+
+#unfavorite-btn:hover {
+    border: 1px solid #000000;
+}
+.action-box {
+    padding-bottom: 2rem;
+    border-bottom: 2px solid rgb(215, 215, 215);
+}
+
+.action-box i {
+    font-size: 2.4rem;
+}
+
+.unselected {
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.select-group input:hover {
+    border: 1px solid black !important;
+}
+
+.btn-checked {
+    border: 1px solid black !important;
+}
+
+.review-box {
+    border-bottom: 2px solid rgb(215, 215, 215);
+}
+.review-show {
+    display: block;
+    width: 100%;
+    height: 8rem;
+    line-height: 8rem;
+    font-size: 2rem;
+}
+.review-box-title, .review-box-star {
+    display: inline-block;
+    width: fit-content;
+}
+
+.review-box-title{
+    float: left;
+}
+
+.dropdown-icon, .review-box-star {
+    float: right;
+}
+
+.dropdown-icon {
+    padding-left: 1rem;
+    padding-right: 0.2rem;
+}
+#load-reviews {
+    clear: both;
+}

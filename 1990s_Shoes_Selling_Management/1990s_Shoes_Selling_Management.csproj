@@ -109,6 +109,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\ShowHomePage.cshtml" />
     <Content Include="Views\Home\ShowShoesPage.cshtml" />
+    <Content Include="Views\Home\ShowShoesDetail.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
