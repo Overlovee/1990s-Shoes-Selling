@@ -110,6 +110,12 @@
     <Content Include="Views\Home\ShowHomePage.cshtml" />
     <Content Include="Views\Home\ShowShoesPage.cshtml" />
     <Content Include="Views\Home\ShowShoesDetail.cshtml" />
+    <Content Include="Views\Home\ShowFavoritePage.cshtml" />
+    <Content Include="Views\Home\ShowBagPage.cshtml" />
+    <Content Include="Views\Home\SignUp.cshtml" />
+    <Content Include="Views\Home\SignIn.cshtml" />
+    <Content Include="Views\Home\UserAccountManagement.cshtml" />
+    <Content Include="Views\Home\UserProfile.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,136 @@
+﻿
+@{
+    ViewBag.Title = "UserProfile";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<div class="profile row">
+    <div class="header-profile row">
+        <div class="avt-img">
+            <a href="#">
+                <img src="https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.30808-6/319663287_1184071349196598_4955933916543015161_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=32qtlPxL0L4AX8trPIa&_nc_ht=scontent.fsgn19-1.fna&oh=00_AfB-gy9X4jJCaqL-vspqijmWjW58AQXgTxsNd1P3r2eL1w&oe=65377C0B"
+                     alt="Minh Thu">
+            </a>
+        </div>
+        <div class="user-name-box">
+            <div class="d-flex align-items-center" style="flex-wrap: wrap; height:100%">
+                <div class="name-box">
+                    <h2 class="full-name">Minh Thu</h2>
+                    <p class="user-name">#minhthu124</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <div class="row justify-content-center">
+            <div class="d-lex">
+                <button id="purchased-products" class="information-action information-action-selected"
+                         data-target="purchased">
+                    Purchased
+                </button>
+                <button id="account-management" class="information-action"
+                        data-target="account-info">
+                    Account
+                </button>
+                <div class="line-seperate mt-3"></div>
+            </div>
+        </div>
+        <div class="tab-content row justify-content-start">
+            <div id="purchased" class="tab-pane show active">
+                <div class="row justify-content-start">
+                    <div class="col-3">
+                        <div class="card">
+                            <a href="#">
+                                <img class="card-img-top img-fluid" alt="Men"
+                                     src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b207c97d-1d63-4e43-9339-375b26222ae2/air-jordan-xxxviii-fiba-pf-basketball-shoes-XnhFhP.png">
+                            </a>
+                            <div class="card-body">
+                                <a href="#">
+                                    <h2 class="card-title">Basketball</h2>
+                                </a>
+                                <p class="card-text type-shoes">Sport shoes</p>
+                                <p class="card-text number-colour">1 Colour</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="btn categories-shoes-btn">Shopping again</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <a href="#">
+                                <img class="card-img-top img-fluid" alt="Men"
+                                     src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b207c97d-1d63-4e43-9339-375b26222ae2/air-jordan-xxxviii-fiba-pf-basketball-shoes-XnhFhP.png">
+                            </a>
+                            <div class="card-body">
+                                <a href="#">
+                                    <h2 class="card-title">Basketball</h2>
+                                </a>
+                                <p class="card-text type-shoes">Sport shoes</p>
+                                <p class="card-text number-colour">1 Colour</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="btn categories-shoes-btn">Shopping again</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <a href="#">
+                                <img class="card-img-top img-fluid" alt="Men"
+                                     src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b207c97d-1d63-4e43-9339-375b26222ae2/air-jordan-xxxviii-fiba-pf-basketball-shoes-XnhFhP.png">
+                            </a>
+                            <div class="card-body">
+                                <a href="#">
+                                    <h2 class="card-title">Basketball</h2>
+                                </a>
+                                <p class="card-text type-shoes">Sport shoes</p>
+                                <p class="card-text number-colour">1 Colour</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="btn categories-shoes-btn">Shopping again</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="account-info" class="tab-pane">
+                <h2>account-info</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Lấy tất cả các nút có class "information-action"
+    const actionButtons = document.querySelectorAll('.information-action');
+
+    // Lặp qua từng nút và thêm sự kiện click
+    actionButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            // Bỏ lớp 'information-action-selected' khỏi tất cả các nút
+            actionButtons.forEach(btn => {
+                btn.classList.remove('information-action-selected');
+            });
+
+            // Thêm lớp 'information-action-selected' cho nút được chọn
+            this.classList.add('information-action-selected');
+            // Lấy giá trị data-target từ nút được chọn
+            const target = this.getAttribute('data-target');
+            
+            // Ẩn tất cả tab-pane
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            tabPanes.forEach(tabPane => {
+                tabPane.classList.remove('show', 'active');
+            });
+
+            // Hiển thị tab-pane tương ứng với nút được chọn
+            const selectedTab = document.getElementById(target);
+            selectedTab.classList.add('show', 'active');
+
+        });
+    });
+</script>
