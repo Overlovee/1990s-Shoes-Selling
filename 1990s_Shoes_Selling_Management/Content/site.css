@@ -992,6 +992,128 @@ figcaption h3 {
     color: black;
     border-bottom: 1px solid black;
 }
+.account-info-title h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.6rem;
+}
+
+.account-info-item-header{
+    height: fit-content;
+}
+.account-info-item-title, .account-info-edit-btn, .password-editing-btn {
+    display: inline-block;
+    font-weight: bold;
+}
+.account-info-item-title{
+    float:left;
+}
+.account-info-edit-btn, .password-editing-btn {
+    float: right;
+    padding: 0 1rem;
+    border-bottom: 1px solid #757575;
+    margin-bottom: 0.6rem;
+    color: #cacaca;
+}
+.account-info-edit-btn:hover, .password-editing-btn:hover {
+    border-bottom-color: black;
+    color: black;
+}
+.account-info-edit-btn-selected {
+    border-bottom-color: black;
+    color: black;
+}
+.account-info-item input {
+    width: 100%;
+    border: 1px solid #757575;
+    border-radius: 6px;
+    line-height: 5.2rem;
+    padding: 0 1rem;
+}
+.delete-content{
+    width:100%;
+}
+#delete-account-btn{
+    text-align:right;
+}
+.delete-content-action {
+    text-align: right;
+}
+.delete-content-title{
+    font-weight: bold;
+    margin: 0;
+    line-height: 4rem;
+    font-size: 1.6rem;
+}
+#delete-account-btn {
+    border: 1px solid #dadada;
+    background-color: white;
+    border-radius: 40px;
+    padding: 0 2rem;
+    line-height: 4rem;
+    text-align: center;
+}
+#delete-account-btn:hover {
+    border: 1px solid #111;
+}
+.saving-tag {
+    text-align: right;
+}
+
+#saving-btn, .save-btn {
+    margin-top: 2rem;
+    display: inline-block;
+    float: right;
+    border-radius: 40px;
+    border: 1px solid #dadada;
+    background-color: white;
+    padding: 0 2rem;
+    line-height: 4rem;
+    text-align: center;
+}
+#saving-btn:hover, .save-btn:hover {
+    border: 1px solid #111;
+}
+.disabled-input {
+    border-color: #E6E6E6 !important;
+    background-color: #FAFAFA !important;
+    cursor: default;
+}
+
+.disabled-btn {
+    border-color: #E6E6E6 !important;
+    background-color: #E6E6E6 !important;
+    cursor: default !important;
+}
+
+.modal-content{
+    padding: 4rem;
+    padding-bottom: 2rem;
+    border-radius: 16px;
+}
+.modal-header {
+    border: 0;
+}
+#password-editorLabel {
+    font-size: 2.4rem;
+    font-weight: bolder;
+}
+#delivery-info{
+    padding: 0 12rem;
+}
+.deliver-info-title{
+    margin: 0;
+}
+.deliver-info-item, .deliver-info-item .row, .deliver-info-item h2, .deliver-info-item p {
+    margin: 0;
+}
+
+.recipient-info-action-btn{
+    padding: 0 1rem;
+}
+.recipient-info-action-btn:hover {
+    cursor: pointer;
+}
 /* /Midle */
 /* Footer */
 footer {
@@ -1344,6 +1466,10 @@ footer a:hover {
     .sign-form{
         width:80%;
     }
+
+    #delivery-info{
+        padding: 0 4rem;
+    }
 }
 
 /*Mobile: width < 740px */
@@ -1541,6 +1667,9 @@ footer a:hover {
     /*Sign form*/
     .sign-form {
         width: 100%;
+    }
+    #delivery-info {
+        padding: 0;
     }
 }
 
