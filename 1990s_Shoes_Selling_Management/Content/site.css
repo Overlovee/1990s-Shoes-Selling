@@ -88,11 +88,11 @@ header {
     line-height: 4rem;
 }
 
-.top-header a svg, #logo-nike {
-    fill: #000000;
+.logo a svg, #logo-nike {
+    fill: #ffffff;
 }
 
-.top-header a:hover svg, #logo-nike:hover {
+.logo a:hover svg, #logo-nike:hover {
     fill: #757575;
     transition: fill .1s;
 }
@@ -1672,7 +1672,4 @@ footer a:hover {
         padding: 0;
     }
 }
-
-
-
 

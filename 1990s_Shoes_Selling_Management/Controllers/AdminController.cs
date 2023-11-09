@@ -6,10 +6,14 @@ using System.Web.Mvc;
 
 namespace _1990s_Shoes_Selling_Management.Controllers
 {
-    public class AđminController : Controller
+    public class AdminController : Controller
     {
         // GET: Ađmin
         public ActionResult Index()
+        {
+            return View();
+        }
+        public ActionResult Home()
         {
             return View();
         }
