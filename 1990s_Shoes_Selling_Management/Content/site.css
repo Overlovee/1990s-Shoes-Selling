@@ -502,13 +502,13 @@ figcaption h3 {
     margin-top: 1rem;
 }
 
-    .shoes-size-box input[type="button"] {
-        border: 1px solid #cacaca;
-        border-radius: 2px;
-        color: black;
-        font-size: 2rem;
-        line-height: 5.4rem;
-    }
+.shoes-size-box input[type="button"] {
+    border: 1px solid #cacaca;
+    border-radius: 2px;
+    color: black;
+    font-size: 2rem;
+    line-height: 5.4rem;
+}
 
 .grid-layout-3col {
     display: grid;
@@ -957,14 +957,34 @@ figcaption h3 {
     padding: 0;
     height: 12rem;
     width: 12rem;
-    border-radius: 50%;
-    overflow: hidden;
+    position: relative;
 }
 .avt-img img {
     width: 12rem;
     height: 12rem;
+    border-radius: 50%;
+    overflow: hidden;
     object-fit: cover;
 }
+.edit-avt-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    display: none;
+    border-radius: 4px;
+}
+
+.edit-avt-btn:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.avt-img:hover .edit-avt-btn {
+    display: block;
+}
+
 .user-name-box {
     display: inline-block;
     width:fit-content;

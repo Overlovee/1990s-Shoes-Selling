@@ -17,5 +17,21 @@ namespace _1990s_Shoes_Selling_Management.Controllers
         {
             return View();
         }
+        public ActionResult ManageProducts()
+        {
+            return View();
+        }
+        public ActionResult ManageUsers()
+        {
+            return View();
+        }
+        public ActionResult ManageAdmins()
+        {
+            return View();
+        }
+        public ActionResult MyAccount()
+        {
+            return View();
+        }
     }
 }

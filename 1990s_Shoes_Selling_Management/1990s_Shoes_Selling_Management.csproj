@@ -123,6 +123,10 @@
     <Content Include="Views\Shared\AdminTaskbar.cshtml" />
     <Content Include="Views\Shared\AdminHeader.cshtml" />
     <Content Include="Views\Admin\Home.cshtml" />
+    <Content Include="Views\Admin\ManageProducts.cshtml" />
+    <Content Include="Views\Admin\ManageUsers.cshtml" />
+    <Content Include="Views\Admin\ManageAdmins.cshtml" />
+    <Content Include="Views\Admin\MyAccount.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
