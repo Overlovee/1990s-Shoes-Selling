@@ -88,7 +88,7 @@ img, video, iframe, embed {
 
 .main-content {
     padding: 2rem;
-    padding-top: 1rem;
+    /*padding-top: 1rem;*/
 }
 .taskbar {
     width: 264px;
@@ -464,6 +464,7 @@ header .col {
     color: black;
 }
 .content-list-box {
+    min-height: 400px;
     height: 100%;
     padding: 1rem;
     overflow: hidden;
@@ -707,3 +708,19 @@ header .col {
     display: block;
 }
 
+.navbar .container-fluid{
+    width:100%;
+}
+#orderListSelectBox .nav-item {
+    padding: 0.4rem;
+}
+
+#orderListSelectBox .nav-item button{
+    background-color: #cccccc;
+}
+#orderListSelectBox .nav-item button:hover {
+    background-color: black;
+}
+.order-list .card{
+    flex-direction: row !important;
+}
