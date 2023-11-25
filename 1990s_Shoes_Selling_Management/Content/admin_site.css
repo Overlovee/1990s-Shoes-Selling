@@ -725,7 +725,30 @@ header .col {
     display: flex;
     flex-direction: row !important;
 }
-.order-list .order-id .card-body{
+.order-list .card.card-flex-column {
+    flex-direction: column !important;
+}
+.order-list .card .card-body.flex-column {
+    flex-direction: column !important;
+}
+.order-list .card .action-btn.flex-column {
+    flex-direction: column !important;
+}
+.order-list .card .wait-for-confirm-box.text-left{
+    text-align: left;
+    padding: 0 2rem;
+}
+.order-list .card .card-serial.text-center {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    padding: 0 1rem;
+}
+.order-list .card .card-serial.text-center h2{
+    width: 100%;
+    text-align: center;
+}
+.order-list .order-id .card-body {
     gap: 20px;
 }
 .flex-child{
@@ -736,7 +759,7 @@ header .col {
     padding: 0 1rem;
 }
 .order-list .card-serial .serial {
-    width: fit-content!important;
+    width: fit-content;
     line-height: 44px;
     margin: 0;
 }
@@ -759,7 +782,7 @@ header .col {
 
 }
 .order-list .detail-btn {
-    padding: 0 6rem;
+    padding: 0 2rem;
     height: 100%;
 }
 .order-list .wait-for-confirm-box {

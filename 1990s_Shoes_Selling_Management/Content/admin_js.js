@@ -75,6 +75,36 @@ function updateCSS() {
             accountInfo.style.paddingTop = "2rem";
         }
     }
+
+    const orderList = document.querySelector(".order-list");
+    if (orderList) {
+        if (orderList.querySelector(".order-item")) {
+            const listOrderItem = orderList.querySelectorAll(".card");
+            if (window.innerWidth < 768) {
+                listOrderItem.forEach(function (item) {
+                    item.classList.toggle("card-flex-column");
+                    item.querySelector(".card-body").classList.toggle("flex-column");
+                    item.querySelector(".action-btn").classList.toggle("flex-column");
+                    item.querySelector(".card-serial").classList.toggle("text-center");
+                    item.querySelector(".wait-for-confirm-box").classList.toggle("text-left");
+                });
+            }
+            else {
+                listOrderItem.forEach(function (item) {
+                    item.classList.toggle("card-flex-column");
+                    item.classList.toggle("card-flex-column");
+                    item.querySelector(".card-serial").classList.toggle("text-center");
+                    item.querySelector(".card-serial").classList.toggle("text-center");
+                    item.querySelector(".card-body").classList.toggle("flex-column");
+                    item.querySelector(".card-body").classList.toggle("flex-column");
+                    item.querySelector(".action-btn").classList.toggle("flex-column");
+                    item.querySelector(".action-btn").classList.toggle("flex-column");
+                    item.querySelector(".wait-for-confirm-box").classList.toggle("text-left");
+                    item.querySelector(".wait-for-confirm-box").classList.toggle("text-left");
+                });
+            }
+        }
+    }
 }
 window.addEventListener('load', updateCSS);
 window.addEventListener('resize', updateCSS);
