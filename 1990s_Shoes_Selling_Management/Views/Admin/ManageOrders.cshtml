@@ -33,10 +33,10 @@
         <div class="collapse navbar-collapse justify-content-between" id="orderListSelectBox">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <button class="add-new-btn" aria-current="page" href="#">All</button>
+                    <button class="add-new-btn" aria-current="page" href="#">Wait For Confirm</button>
                 </li>
                 <li class="nav-item">
-                    <button class="add-new-btn" aria-current="page" href="#">Wait For Confirm</button>
+                    <button class="add-new-btn" aria-current="page" href="#">All</button>
                 </li>
                 <li class="nav-item">
                     <button class="add-new-btn" aria-current="page" href="#">Confirmed</button>
@@ -83,15 +83,196 @@
     <div class="content-list-box order-list">
         <div class="row">
             <div class="col-md">
-                <div class="card d-flex>
-                    <a href="#" class="order-id col">
-                        DH012312
-                    </a>
-                    <div class="card-body col">
-                        <span class="card-text user-name">#minhthu123</span>
+                <div class="row">
+                    <div class="card">
+                        <div class="card-serial">
+                            <h2 class="serial">1</h2>
+                        </div>
+                        <div class="card-body col-md d-flex flex-row">
+                            <div class="flex-child">
+                                <a href="#" class="order-id">
+                                    DH012312
+                                </a>
+                            </div>
+                            <div class="flex-child">
+                                <span class="card-text">21/10/2003</span>
+                            </div>
+                            <div class="flex-child">
+                                <span class="card-text">Total: 2123123 VND</span>
+                            </div>
+                        </div>
+                        <div class="col-md action-btn d-flex">
+                            <div class="wait-for-confirm-box col">
+                                <span class="card-text">
+                                    Wait for confirmation
+                                </span>
+                            </div>
+                            <button class="detail-btn col"
+                                    data-bs-toggle="collapse" href="#DH124" role="button"
+                                    aria-expanded="false" aria-controls="DH124">
+                                Detail
+                            </button>
+                        </div>
                     </div>
-                    <div class="col d-flex">
-                        <button class="detail-btn col">Detail</button>
+                    <div class="collapse" id="DH124">
+                        <div class="detail-order">
+                            <div class="infor-customer row">
+                                <div class="col-md-3">
+                                    <span class="card-text">Nguyễn Minh Thư</span>
+                                </div>
+                                <div class="col-md-2">
+                                    <span class="card-text">0123123123</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="card-text">abc123@gmail.com</span>
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="card-text">1039 Hong Bang Street, Ward 9, District 6, Ho Chi Minh City</span>
+                                </div>
+                            </div>
+                            <div class="order-product-list">
+                                <div class="product-item row">
+                                    <a href="#" class="col-md-2 product-img">
+                                        <img class="img-fluid" alt="Men"
+                                             src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b207c97d-1d63-4e43-9339-375b26222ae2/air-jordan-xxxviii-fiba-pf-basketball-shoes-XnhFhP.png">
+                                    </a>
+                                    <div class="card-body col-md-5">
+                                        <a href="#">
+                                            <h2 class="card-title">Basketball</h2>
+                                        </a>
+                                        <p class="card-text type-shoes">Sport shoes</p>
+                                        <p class="card-text number-colour">1 Colour</p>
+                                    </div>
+                                    <div class="quantity-box col-md-3">
+                                        <span class="card-text quantity">2</span> x
+                                        <span class="shoes-price">3,200,000 <span class"unit">VND</span></span>
+                                    </div>
+                                    <div class="summary-box col-md-2">
+                                        <p class="card-text total-of-product-item">100123 VND</p>
+                                    </div>
+                                </div>
+                                <div class="product-item row">
+                                    <a href="#" class="col-md-2 product-img">
+                                        <img class="img-fluid" alt="Men"
+                                             src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b207c97d-1d63-4e43-9339-375b26222ae2/air-jordan-xxxviii-fiba-pf-basketball-shoes-XnhFhP.png">
+                                    </a>
+                                    <div class="card-body col-md-5">
+                                        <a href="#">
+                                            <h2 class="card-title">Basketball</h2>
+                                        </a>
+                                        <p class="card-text type-shoes">Sport shoes</p>
+                                        <p class="card-text number-colour">1 Colour</p>
+                                    </div>
+                                    <div class="quantity-box col-md-3">
+                                        <span class="card-text quantity">2</span> x
+                                        <span class="shoes-price">3,200,000 <span class"unit">VND</span></span>
+                                    </div>
+                                    <div class="summary-box col-md-2">
+                                        <p class="card-text total-of-product-item">100123 VND</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer-detail-order">
+                                <button class="delete-btn col">Cancel order</button>
+                                <button class="edit-btn col">Confirm order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card">
+                        <div class="card-serial">
+                            <h2 class="serial">1</h2>
+                        </div>
+                        <div class="card-body col-md d-flex flex-row">
+                            <div class="flex-child">
+                                <a href="#" class="order-id">
+                                    DH012312
+                                </a>
+                            </div>
+                            <div class="flex-child">
+                                <span class="card-text">21/10/2003</span>
+                            </div>
+                            <div class="flex-child">
+                                <span class="card-text">Total: 2123123 VND</span>
+                            </div>
+                        </div>
+                        <div class="col-md action-btn d-flex">
+                            <div class="wait-for-confirm-box col">
+                                <span class="card-text">
+                                    Wait for confirmation
+                                </span>
+                            </div>
+                            <button class="detail-btn col"
+                                    data-bs-toggle="collapse" href="#DH123" role="button"
+                                    aria-expanded="false" aria-controls="DH123">
+                                Detail
+                            </button>
+                        </div>
+                    </div>
+                    <div class="collapse" id="DH123">
+                        <div class="detail-order">
+                            <div class="infor-customer row">
+                                <div class="col-md-3">
+                                    <span class="card-text">Nguyễn Minh Thư</span>
+                                </div>
+                                <div class="col-md-2">
+                                    <span class="card-text">0123123123</span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="card-text">abc123@gmail.com</span>
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="card-text">1039 Hong Bang Street, Ward 9, District 6, Ho Chi Minh City</span>
+                                </div>
+                            </div>
+                            <div class="order-product-list">
+                                <div class="product-item row">
+                                    <a href="#" class="col-md-2 product-img">
+                                        <img class="img-fluid" alt="Men"
+                                             src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b207c97d-1d63-4e43-9339-375b26222ae2/air-jordan-xxxviii-fiba-pf-basketball-shoes-XnhFhP.png">
+                                    </a>
+                                    <div class="card-body col-md-5">
+                                        <a href="#">
+                                            <h2 class="card-title">Basketball</h2>
+                                        </a>
+                                        <p class="card-text type-shoes">Sport shoes</p>
+                                        <p class="card-text number-colour">1 Colour</p>
+                                    </div>
+                                    <div class="quantity-box col-md-3">
+                                        <span class="card-text quantity">2</span> x
+                                        <span class="shoes-price">3,200,000 <span class"unit">VND</span></span>
+                                    </div>
+                                    <div class="summary-box col-md-2">
+                                        <p class="card-text total-of-product-item">100123 VND</p>
+                                    </div>
+                                </div>
+                                <div class="product-item row">
+                                    <a href="#" class="col-md-2 product-img">
+                                        <img class="img-fluid" alt="Men"
+                                             src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b207c97d-1d63-4e43-9339-375b26222ae2/air-jordan-xxxviii-fiba-pf-basketball-shoes-XnhFhP.png">
+                                    </a>
+                                    <div class="card-body col-md-5">
+                                        <a href="#">
+                                            <h2 class="card-title">Basketball</h2>
+                                        </a>
+                                        <p class="card-text type-shoes">Sport shoes</p>
+                                        <p class="card-text number-colour">1 Colour</p>
+                                    </div>
+                                    <div class="quantity-box col-md-3">
+                                        <span class="card-text quantity">2</span> x
+                                        <span class="shoes-price">3,200,000 <span class"unit">VND</span></span>
+                                    </div>
+                                    <div class="summary-box col-md-2">
+                                        <p class="card-text total-of-product-item">100123 VND</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer-detail-order">
+                                <button class="delete-btn col">Cancel order</button>
+                                <button class="edit-btn col">Confirm order</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

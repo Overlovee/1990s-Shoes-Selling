@@ -721,6 +721,81 @@ header .col {
 #orderListSelectBox .nav-item button:hover {
     background-color: black;
 }
-.order-list .card{
+.order-list .card {
+    display: flex;
     flex-direction: row !important;
+}
+.order-list .order-id .card-body{
+    gap: 20px;
+}
+.flex-child{
+    padding: 0 1rem;
+}
+.order-list .card-serial{
+    width: 3rem;
+    padding: 0 1rem;
+}
+.order-list .card-serial .serial {
+    width: fit-content!important;
+    line-height: 44px;
+    margin: 0;
+}
+.order-list .collapse{
+    
+    width: 100%;
+}
+.order-list .card:hover {
+    transform: scale(1);
+    border: 1px solid rgba(0,0,0,.3);
+}
+.order-list .row {
+    gap: 1rem;
+}
+.order-list .customer-phonenumer {
+    width: 100%;
+}
+.order-list .action-btn {
+    text-align: right;
+
+}
+.order-list .detail-btn {
+    padding: 0 6rem;
+    height: 100%;
+}
+.order-list .wait-for-confirm-box {
+    text-align: right;
+    padding-right: 2rem;
+    line-height: 44px;
+}
+.wait-for-confirm-box .card-text{
+    font-style: italic;
+}
+.detail-order {
+    border: 1px solid rgba(0,0,0,.125);
+}
+.detail-order .infor-customer {
+    gap: 0;
+    margin: 0 2rem;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.detail-order .product-item {
+    gap: 0;
+    margin: 0 2rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.detail-order .product-img {
+    padding: 0 1rem;
+}
+.detail-order .product-item .summary-box {
+    text-align: right;
+}
+.detail-order .footer-detail-order {
+    text-align: right;
+    padding: 1rem 1rem;
+}
+.detail-order .footer-detail-order button{
+    padding: 1rem 2rem;
 }
