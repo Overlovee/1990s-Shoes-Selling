@@ -89,20 +89,6 @@ function updateCSS() {
                     item.querySelector(".wait-for-confirm-box").classList.toggle("text-left");
                 });
             }
-            else {
-                listOrderItem.forEach(function (item) {
-                    item.classList.toggle("card-flex-column");
-                    item.classList.toggle("card-flex-column");
-                    item.querySelector(".card-serial").classList.toggle("text-center");
-                    item.querySelector(".card-serial").classList.toggle("text-center");
-                    item.querySelector(".card-body").classList.toggle("flex-column");
-                    item.querySelector(".card-body").classList.toggle("flex-column");
-                    item.querySelector(".action-btn").classList.toggle("flex-column");
-                    item.querySelector(".action-btn").classList.toggle("flex-column");
-                    item.querySelector(".wait-for-confirm-box").classList.toggle("text-left");
-                    item.querySelector(".wait-for-confirm-box").classList.toggle("text-left");
-                });
-            }
         }
     }
 }
