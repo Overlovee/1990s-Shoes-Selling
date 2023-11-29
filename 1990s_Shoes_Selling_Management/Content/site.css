@@ -89,7 +89,7 @@ header {
 }
 
 .logo a svg, #logo-nike {
-    fill: #ffffff;
+    fill: black;
 }
 
 .logo a:hover svg, #logo-nike:hover {

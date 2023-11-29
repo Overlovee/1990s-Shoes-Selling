@@ -491,9 +491,33 @@ header .col {
 /*.list-box-title button, .list-box-title ul, .list-box-title ul li {
     width: 100%;
 }*/
+#account-display #offcanvasRightLabel {
+    text-align: center;
+    font-size: 1.8rem;
+}
+#account-display .offcanvas-body {
+    text-align: center;
+}
+#account-display .modal-avt-img{
+    
+}
+#account-display .modal-avt-img img{
+    width: 40%;
+    height: fit-content;
+
+}
+#account-display .btn-inform i{
+    font-size: 2rem;
+}
+#account-display .modal-body-content button:hover{
+    background-color: rgba(0,0,0,.125);
+}
 .content-list-box .row {
     padding: 1rem 2rem;
-    gap: 2rem;
+    margin: 0 -10px;
+}
+.content-list-box .row .col-md-3 {
+    padding: 0 10px;
 }
 .header-list-box .pagination {
     padding-right: 1rem;

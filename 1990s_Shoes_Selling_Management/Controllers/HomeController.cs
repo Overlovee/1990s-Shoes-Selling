@@ -13,7 +13,12 @@ namespace _1990s_Shoes_Selling_Management.Controllers
         {
             return View();
         }
+
         public ActionResult ShowHomePage()
+        {
+            return View();
+        }
+        public ActionResult ShoesPage(string gender = "Men", string icon = "All")
         {
             return View();
         }

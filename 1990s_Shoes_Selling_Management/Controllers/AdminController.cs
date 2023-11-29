@@ -17,6 +17,10 @@ namespace _1990s_Shoes_Selling_Management.Controllers
         {
             return View();
         }
+        public ActionResult Home1()
+        {
+            return View();
+        }
         public ActionResult ManageProducts()
         {
             return View();
@@ -27,6 +31,7 @@ namespace _1990s_Shoes_Selling_Management.Controllers
         }
         public ActionResult ManageAdmins()
         {
+            
             return View();
         }
         public ActionResult MyAccount()
