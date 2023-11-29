@@ -10,7 +10,7 @@
             <div class="bag-content-title row">
                 <h2>Bag</h2>
             </div>
-            <div class="bag-items row gx-5">
+            <div class="bag-items row gx-5 selected">
                 <div class="bag-items-img col-2 position-relative">
                     <a href="#">
                         <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f8dfa191-60b3-44c1-b730-b25e0a908c35/air-force-1-07-flyease-shoes-LKXPhZ.png"
@@ -28,8 +28,8 @@
                                 </p>
                                 <div class="details-options row justify-content-start">
                                     <div class="select-line col-sm-4">
-                                        <label for="">Size: </label>
-                                        <select name="details-options-size" id="details-options-size">
+                                        <span>Size: </span>
+                                        <select name="details-options-size">
                                             <option value="S">S</option>
                                             <option value="M">M</option>
                                             <option value="L">L</option>
@@ -39,7 +39,7 @@
                                         <i class="fa-solid fa-chevron-down"></i>
                                     </div>
                                     <div class="select-line col-sm-4">
-                                        <label for="">Quantity: </label>
+                                        <span>Quantity: </span>
                                         <select name="details-options-quantity"
                                                 class="details-options-quantity">
                                             <option value="1">1</option>
@@ -65,6 +65,9 @@
                             </div>
                             <div class="clear-bag-items col align-self-end">
                                 <div>
+                                    <button class="btn select-group-btn">
+                                        <i class="fa-regular fa-square-check"></i>
+                                    </button>
                                     <button class="btn clear-item">
                                         <i class="fa-solid fa-x"></i>
                                     </button>
@@ -75,7 +78,7 @@
                 </div>
                 <div class="line-seperate mt-4"></div>
             </div>
-            <div class="bag-items row gx-5">
+            <div class="bag-items row gx-5 selected">
                 <div class="bag-items-img col-2 position-relative">
                     <a href="#">
                         <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f8dfa191-60b3-44c1-b730-b25e0a908c35/air-force-1-07-flyease-shoes-LKXPhZ.png"
@@ -93,8 +96,8 @@
                                 </p>
                                 <div class="details-options row justify-content-start">
                                     <div class="select-line col-sm-4">
-                                        <label for="">Size: </label>
-                                        <select name="details-options-size" id="details-options-size">
+                                        <span>Size: </span>
+                                        <select name="details-options-size">
                                             <option value="S">S</option>
                                             <option value="M">M</option>
                                             <option value="L">L</option>
@@ -104,7 +107,7 @@
                                         <i class="fa-solid fa-chevron-down"></i>
                                     </div>
                                     <div class="select-line col-sm-4">
-                                        <label for="">Quantity: </label>
+                                        <span>Quantity: </span>
                                         <select name="details-options-quantity"
                                                 class="details-options-quantity">
                                             <option value="1">1</option>
@@ -130,6 +133,9 @@
                             </div>
                             <div class="clear-bag-items col align-self-end">
                                 <div>
+                                    <button class="btn select-group-btn">
+                                        <i class="fa-regular fa-square-check"></i>
+                                    </button>
                                     <button class="btn clear-item">
                                         <i class="fa-solid fa-x"></i>
                                     </button>
@@ -149,14 +155,14 @@
 
                 <div class="sub-total-line">
                     <div class="summary-box-line">
-                        <label for="">Subtotal</label>
+                        <span >Subtotal</span>
                         <div class="summary-box-money-items">
                             <span class="money" id="sub-total">1</span>
                             <span class="unit">đ</span>
                         </div>
                     </div>
                     <div class="summary-box-line">
-                        <label for="">Delivery Fee</label>
+                        <span >Delivery Fee</span>
                         <div class="summary-box-money-items">
                             <span class="money" id="delivery-fee"></span>
                             <span class="unit">đ</span>
@@ -166,7 +172,7 @@
                 </div>
                 <div id="total-line">
                     <div class="summary-box-line">
-                        <label for="">Total</label>
+                        <span >Total</span>
                         <div class="summary-box-money-items">
                             <span class="money" id="total"></span>
                             <span class="unit">đ</span>
@@ -255,18 +261,20 @@
         const checkOutBtn = document.querySelector('#checkout-btn');
 
         var subTotal = 0;
+        const selectedItems = document.querySelectorAll('.selected');
 
-        if (!noItemsElement) {
+        if (!noItemsElement && selectedItems.length != 0) {
             const items = document.querySelectorAll('.bag-items');
             const quantitiesChange = document.querySelectorAll('.details-options-quantity');
 
 
-
             Array.from(items).forEach(item => {
-                var quantity = parseFloat(item.querySelector('.details-options-quantity').value);
-                var prices = parseFloat(item.querySelector('.prices').textContent.replace(/,/g, ''));
+                if (item.classList.contains('selected')) {
+                    var quantity = parseFloat(item.querySelector('.details-options-quantity').value);
+                    var prices = parseFloat(item.querySelector('.prices').textContent.replace(/,/g, ''));
 
-                subTotal += quantity * prices;
+                    subTotal += quantity * prices;
+                }
             });
             //Delivery-fee = 250,000đ
             var deliveryFee = 250000;
@@ -286,20 +294,22 @@
                 quantityElement.addEventListener("change", function () {
                     subTotal = 0;
                     Array.from(items).forEach(item => {
-                        var quantity = parseFloat(item.querySelector('.details-options-quantity').value);
-                        var prices = parseFloat(item.querySelector('.prices').textContent.replace(/,/g, ''));
+                        if (item.classList.contains('selected')) {
+                            var quantity = parseFloat(item.querySelector('.details-options-quantity').value);
+                            var prices = parseFloat(item.querySelector('.prices').textContent.replace(/,/g, ''));
 
-                        subTotal += quantity * prices;
+                            subTotal += quantity * prices;
 
-                        //Đưa subTotal vao` element id= "sub-total"
+                            //Đưa subTotal vao` element id= "sub-total"
 
-                        subTotalElement.innerHTML = subTotal.toLocaleString();
+                            subTotalElement.innerHTML = subTotal.toLocaleString();
 
-                        //Tính total = subtotal + delivery-fee
-                        total = subTotal + deliveryFee;
-                        //Đưa subTotal vao` element id= "sub-total"
+                            //Tính total = subtotal + delivery-fee
+                            total = subTotal + deliveryFee;
+                            //Đưa subTotal vao` element id= "sub-total"
 
-                        totalElement.innerHTML = total.toLocaleString();
+                            totalElement.innerHTML = total.toLocaleString();
+                        }
                     });
                 });
             });
@@ -364,6 +374,29 @@
             }
         });
     }
+
+    const selectGroupItemElements = document.querySelectorAll('.select-group-btn');
+    
+    selectGroupItemElements.forEach(function (elementSelectGroup) {
+        elementSelectGroup.onclick = function () {
+
+            const bagItemsElement = getBagItemsElement(elementSelectGroup);
+            
+            const iconSelectionItem = elementSelectGroup.querySelector(".fa-regular");
+            
+            if (bagItemsElement.classList.contains('selected')) {
+                iconSelectionItem.classList.remove('fa-square-check');
+                iconSelectionItem.classList.add('fa-square');
+
+            } else {
+                iconSelectionItem.classList.remove('fa-square');
+                iconSelectionItem.classList.add('fa-square-check');
+            }
+            console.log(bagItemsElement);
+            bagItemsElement.classList.toggle("selected");
+            Summary();
+        }
+    });
 
     document.addEventListener('DOMContentLoaded', function () {
         deleteBagItem();
