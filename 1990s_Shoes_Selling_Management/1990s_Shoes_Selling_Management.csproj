@@ -132,12 +132,12 @@
     <Content Include="Views\Shared\AdminLayoutPage.cshtml" />
     <Content Include="Views\Shared\AdminTaskbar.cshtml" />
     <Content Include="Views\Shared\AdminHeader.cshtml" />
-    <Content Include="Views\Admin\Home1.cshtml" />
     <Content Include="Views\Admin\ManageProducts.cshtml" />
     <Content Include="Views\Admin\ManageUsers.cshtml" />
     <Content Include="Views\Admin\ManageAdmins.cshtml" />
     <Content Include="Views\Admin\MyAccount.cshtml" />
     <Content Include="Views\Admin\ManageOrders.cshtml" />
+    <Content Include="Views\Admin\View.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
